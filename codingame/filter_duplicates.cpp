@@ -5,6 +5,18 @@
 #include <unistd.h>
 
 using namespace std;
+
+/*
+Implement the function filter_duplicates(data) that takes a data array as input and returns an array containing the values of  data without the duplicates.
+ 
+The initial order of the values must be kept.
+ 
+Example: [7 6 4 3 3 4 9] => [7 6 4 3 9]
+ 
+Constraints:
+data is never NULL
+*/
+
 #include <map>
 
 vector<int> filter_duplicates(vector<int> data)

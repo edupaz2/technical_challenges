@@ -6,6 +6,20 @@
 
 using namespace std;
 
+/*
+You are carrying a number of stones, each having a level n expressed as an integer (0 < n < 10000).
+
+Two stones of the same level n can be merged together to create a new stone of level n + 1.
+
+The method magic returns the minimal number of stones that can be obtained after multiple merges.
+ 
+
+
+In this example, the minimal number of stones is 1.
+
+Write the body of the method magic(stones). stones is a vector of integers which contains at least one element.
+*/
+
 class Answer
 {
     public:

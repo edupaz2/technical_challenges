@@ -6,6 +6,27 @@
 #include <map>
 
 using namespace std;
+/*
+Objective
+In this problem, you'll be given a list of daily stock prices, and you'll be asked to return the three stocks with the highest average price.
+
+ 
+Implementation
+Implement the function get_top_stocks(stocks, prices) which takes as input:
+
+a vector of strings (stocks), representing the considered stocks.
+a vector of 2 dimensions (prices), representing the stock prices (inner lists) for each day (outer list). 
+An example input would look like this:
+
+['AMZN', 'CACC', 'EQIX', 'GOOG', 'ORLY', 'ULTA']
+[12.81, 11.09, 12.11, 10.93, 9.83, 8.14], [10.34, 10.56, 10.14, 12.17, 13.1, 11.22], [11.53, 10.67, 10.42, 11.88, 11.77, 10.21]
+ 
+Your get_top_stocks function should return a vector containing the names of the three stocks with the highest average value. The vector should be sorted by decreasing average value. You're guaranteed that each stock will have a unique average value.
+
+For the above example, the correct output would be:
+
+['GOOG', 'ORLY', 'AMZN']
+*/
 
 float average_price(int index, const vector<vector<float>>& prices) {
     float result{0.0f};

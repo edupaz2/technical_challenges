@@ -6,6 +6,35 @@
 
 using namespace std;
 
+/*
+Objective
+Stack the boxes on the platform "A", in order of size (the biggest at the bottom).
+  Rules
+You work in an automated factory that controls a robotic arm to move boxes. The boxes are positioned in 3 stacks: "A", "B" and "C". The arm can move above each stack to pick or release a box. Your goal is to rearrange the boxes to stack all of them onto the platform "A", in order of size.
+
+Your function is given 3 lists. Each list contains the size of every box in the corresponding stack (from bottom to top).
+
+To succeed, your program must output the list of commands for the arm to execute. A command is composed of two letters separated by a space: the source stack from which to pick a box, and the destination stack onto which to drop the box.
+
+It is not necessary to minimize the number of commands but this number should not exceed 200.
+
+  Implementation
+Implement the function solve(boxesA, boxesB, boxesC) which takes 3 arrays of integers: boxes_a, boxes_b and boxes_c. The function must return a vector of strings: the name of the source stack and the name of the destination stack, separated by a space.
+
+For example, your function may return the following list of actions "A C", "B C" and "A B" in order to move a box from A to C, then a box from B to C and then a box from A to B.
+
+ 
+Victory Conditions
+All boxes are piled on stack A, in order of size.
+ 
+Lose Conditions
+Your program outputs an invalid command.
+Your program needs more than 200 commands.
+Constraints
+20 ≤ size ≤ 200
+3 ≤ number of boxes ≤ 8
+*/
+
 string performSwap(vector<int>& source, char sourceID, vector<int>& destination, char destinationID)
 {
     string command;

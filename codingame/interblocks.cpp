@@ -6,6 +6,42 @@
 #include <set>
 
 using namespace std;
+/*
+Objective
+You make wooden toys in your woodworking shop for the enjoyment of your grandchildren. You have planned a serie of small puzzles, and you would like to automate the writing of their solutions.
+Rules
+Each puzzle is a grid, on which wooden blocks are placed. These blocks must be taken out of the game, one after the other, without colliding. You have to determine their movement sequence.
+ 
+Each block is numbered with a value between 0 and 9. When you enter the number of a block and a direction, it will be moved until it is off of the grid.
+ 
+If more than one block can be taken out at the same time, you can choose which one you would like to remove first.
+ 
+If a block can be taken out to many directions, you can choose any one of them.
+ Implementation
+Implement the function solve(width, height, nbBlocks, grid). This function is executed at each round of the game and should return the number of the next block to move and its direction.
+Input data of the function
+width: width of the puzzle, in number of cells.
+height: height of the puzzle, in number of cells.
+nb_blocks: number of blocks initially present in the puzzle.
+grid: a list of height elements, each of which is a string with a size equal to width.
+The parameters width, height and nb_blocks do not change during the whole game.
+ 
+The grid parameter represents the current situation of the puzzle. Each of its characters can take one of the following values :
+. (a dot): an empty square.
+X: a wall. They are placed on some borders of the puzzle. You cannot move these walls.
+an integer between 0 and nb_blocks-1: a square occupied by a block. The same number can be present several times in the grid, representing a single block that extends over several squares. All cells with the same block number are connected (they are never separated into several isolated groups).
+Output data of the function
+A string, containing two data, separated by a space:
+An integer, between 0 and nb_blocks-1, representing the number of the block you want to move.
+The direction you would like to move the block in. There are 4 possible values:
+UP
+RIGHT
+DOWN
+LEFT
+You can only move one block at a time. The block is moved until it either (a) exits the board entirely or (b) collides with another block.
+ 
+Output example: 1 RIGHT
+*/
 
 bool canBlockBeExtractedUp(const vector<string>& grid, int w, int h, int block_number)
 {

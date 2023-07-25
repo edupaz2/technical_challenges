@@ -5,6 +5,68 @@
 #include <unistd.h>
 
 using namespace std;
+/*
+Goal
+Find a pattern in an image.
+  Rules
+You are given 2 images: a base image and a pattern which may appear somewhere on this image.
+
+Each image is represented by a vector of strings, where each element of the vector represents a row of pixels of the image, and each character represents one pixel. Understanding this encoding is not necessary to solve this problem, but for your information, a detailed explanation is provided below.
+
+You must return the position x, y of this pattern in the image, or [-1, -1] if the pattern is not found. If the pattern appears multiple times, return the position of the highest one (the smallest y), and in case of equality, the leftmost one (the smallest x).
+
+The position of the pattern is represented by the coordinates x, y of its top-left corner. x represents the column, y represents the row, and the coordinates [0, 0] represents the top-left corner.
+
+  Implementation
+Implement the function solve(imageWidth, imageHeight, image, patternWidth, patternHeight, pattern) where the parameters are:
+
+imageWidth: the image width
+imageHeight: the image height
+image: the image as a vector of strings, where each character represents a pixel
+patternWidth: the pattern width
+patternHeight: the pattern height
+pattern: the pattern as a vector of strings, where each character represents a pixel
+and which should return:
+
+if the pattern is present in the image: the position x, y, as a vector of 2 integers, representing the top-left corner of the first pattern, going from top to bottom and left to right.
+if the pattern is not present in the image: [-1, -1]
+ 
+Victory Conditions
+The pattern is indeed located at coordinates x, y.
+If the pattern appears multiple times, return the position of the highest one (the smallest y), and in case of equality, the leftmost one (the smallest x).
+ 
+Defeat Conditions
+The inner image that starts at coordinates x, y doesn't match the pattern.
+You take longer than 1 second to anwser.
+There's another matching pattern above or on the left.
+Constraints
+1 ≤ imageWidth ≤ 400
+1 ≤ imageHeight ≤ 400
+1 ≤ patternWidth ≤ 400
+1 ≤ patternHeight ≤ 400
+Response time ≤ 1s
+ Encoding details
+An image is initially a 2D-array of integers, where each integer represents a pixel (using RGB notation). All our images contain less than 62 different colors, so that we're able to encode each integer as a character among 0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ. We basically transformed the image into an array of strings, where the 1st string in the array is the 1st row of the image, etc.
+
+For example, this 3x3 image:
+
+
+
+is represented as a 2D integer array as:
+
+[
+  [0xff0000, 0x00ff00, 0x0000ff],
+  [0xd3d3d3, 0x000000, 0xd3d3d3],
+  [0xff0000, 0x00ff00, 0x0000ff]
+]
+which is then encoded as an array of strings as:
+
+[
+  "012",
+  "343",
+  "012"
+]
+*/
 
 
 bool equals(const vector<string>& image, int i, int j, const vector<string>& pattern, int w, int h)
