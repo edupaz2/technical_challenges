@@ -7,7 +7,6 @@ public:
         int maxLen = 1;
 
         for(int i = 0; i < n; ++i) {
-            std::cout << "for loop " << i << std::endl;
             for(int j = 0; j <= 1; ++j) {
                 int low = i;
                 int high = i+j;
